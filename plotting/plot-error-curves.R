@@ -261,11 +261,11 @@ logMaximumErrors <- function(example, original) {
   
   # Compute error curves
   for (i in 2:length(files)) {
-    file <- read.csv(paste(c(DATA_DIRECTROY, example, files[i]), collapse = "/"))
+    file <- read.csv(paste(c(DATA_DIRECTROY, example, files[length(files)-i+2]), collapse = "/"))
     errorCurve <- getErrorCurveMaxBetweenJoints(original, file)
     eMax <- max(errorCurve)
     eMaxRounded <- round(eMax, digits=2)
-    print(glue("{example}: {files[i]} gives maximum error = {eMaxRounded}"))
+    print(glue("{example}: {files[length(files)-i+2]} gives maximum error = {eMaxRounded}"))
   }
 }
 
@@ -276,11 +276,11 @@ logAverageErrors <- function(example, original) {
   nFrames <- nrow(original)
   
   for (i in 2:length(files)) {
-    file <- read.csv(paste(c(DATA_DIRECTROY, example, files[i]), collapse = "/"))
+    file <- read.csv(paste(c(DATA_DIRECTROY, example, files[length(files)-i+2]), collapse = "/"))
     errorCurve <- getErrorCurveMaxBetweenJoints(original, file)
     eSum <- sum(errorCurve) / nFrames
     eSumRounded <- round(eSum, digits=2)
-    print(glue("{example}: {files[i]} gives average error = {eSumRounded}"))
+    print(glue("{example}: {files[length(files)-i+2]} gives average error = {eSumRounded}"))
   }
 }
 
