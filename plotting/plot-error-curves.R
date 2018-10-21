@@ -181,7 +181,7 @@ startPNG <- function(example) {
   png(filepath,width=1600,height=500)
 }
 
-plotErrorCurvesForExample <- function(example, savePDF, savePNG) {
+plotErrorCurvesForExample <- function(example, savePDF, savePNG, xLabelInc, yLabelInc) {
   
   # Start the file for the plotting (only when saving the output)
   if (savePDF) { startPDF(example) }
@@ -221,12 +221,12 @@ plotErrorCurvesForExample <- function(example, savePDF, savePNG) {
   title(main=name, cex=1,  col= "grey20", line=1)
   
   # Set custom- axis
-  at = seq(meta$start, meta$end, 10)
+  at = seq(meta$start, meta$end, xLabelInc)
   mtext(side = 1, text = at, at = at, col = "grey20", line = 0.5, cex = 1.0)
   title(xlab = "Frame Number", mgp=c(2,0,0), cex.lab=1.2)
   
   # Set custom y-axis
-  at = seq(minY, maxY, 50)
+  at = seq(minY, maxY, yLabelInc)
   mtext(side = 2, text = at, at = at, col = "grey20", line = 0.4, cex = 1.0)
   title(ylab = "Maximum Error Per Joint (mm)", mgp=c(2.5,0,0),cex.lab=1.2)
   
@@ -310,8 +310,8 @@ logCompresionRatio <- function(example, original) {
 # -------------------------------------------------------------------------------------------------- #
 # Top-level execution
 
-runExample <- function(example, savePDF, savePNG, logErrorInformation) {
-  plotErrorCurvesForExample(example, savePDF, savePNG)  
+runExample <- function(example, savePDF, savePNG, logErrorInformation, xLabelInc, yLabelInc) {
+  plotErrorCurvesForExample(example, FALSE, FALSE, xLabelInc, yLabelInc)
   
   if (logErrorInformation) {
     files <- gatherFilesInExample(example)
@@ -326,7 +326,7 @@ run <- function(savePDF, savePNG, logErrorInformation) {
   examples <- gatherExamples()
   for (i in 1:length(examples)) {
     example <- examples[i]
-    runExample(example, savePDF, savePNG, logErrorInformation)
+    runExample(example, savePDF, savePNG, logErrorInformation, 10, 50)
   }
 }
 
