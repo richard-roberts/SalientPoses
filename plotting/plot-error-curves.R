@@ -284,6 +284,24 @@ logAverageErrors <- function(example, original) {
   }
 }
 
+logCompresionRatio <- function(example, original) {
+  files <- gatherFilesInExample(example)
+  
+  # Calculate total number of frames
+  original <- read.csv(paste(c(DATA_DIRECTROY, example, files[1]), collapse = "/"))
+  nFrames <- nrow(original)
+
+  # Iterate each of the compressed animations and create a name,
+  # which includes the number of keyframes and the compression level
+  for (i in 2:length(files)) {
+    nKeyframes <- nKeyframesFromFilename(files[length(files)-i+2])
+    compression <- calculateCompressionLevel(nKeyframes, nFrames)
+    compressionRounded <- round(compression, digits=2)
+    print(glue("{example}: {files[length(files)-i+2]} gives compression = {compressionRounded}"))
+  }
+}
+
+
 #
 # -------------------------------------------------------------------------------------------------- #
 
@@ -300,6 +318,7 @@ runExample <- function(example, savePDF, savePNG, logErrorInformation) {
     original <- read.csv(paste(c(DATA_DIRECTROY, example, files[1]), collapse = "/"))
     logMaximumErrors(example, original)
     logAverageErrors(example, original)
+    logCompresionRatio(example, original)
   }
 }
 
