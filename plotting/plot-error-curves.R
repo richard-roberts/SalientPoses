@@ -332,6 +332,27 @@ runExample <- function(example, savePDF, savePNG, logErrorInformation, xLabelInc
   }
 }
 
+runExample("Baseball_Umpire", TRUE, TRUE, FALSE, 10, 50)
+runExample("Braced_Hang_Hop_Right", TRUE, TRUE, FALSE, 10, 50)
+runExample("Climbing_To_Top", TRUE, TRUE, FALSE, 20, 50)
+runExample("Football_Hike", TRUE, TRUE, FALSE, 10, 10)
+runExample("Goalkeeper_Diving_Save", TRUE, TRUE, FALSE, 20, 100)
+runExample("Jumping_Down", TRUE, TRUE, FALSE, 10, 50)
+runExample("Left_Shimmy", TRUE, TRUE, FALSE, 10, 10)
+runExample("Long_Left_Side_Step", TRUE, TRUE, FALSE, 5, 10)
+runExample("One_Shoulder_Lean", TRUE, TRUE, FALSE, 10, 10)
+runExample("Opening_Door_Inwards", TRUE, TRUE, FALSE, 50, 50)
+runExample("Put_Back_Rifle_Behind_Shoulder", TRUE, TRUE, FALSE, 10, 10)
+runExample("Reaching_Down", TRUE, TRUE, FALSE, 10, 10)
+runExample("Samba_Dancing", TRUE, TRUE, FALSE, 100, 50)
+runExample("Searching_Pockets", TRUE, TRUE, FALSE, 20, 10)
+runExample("Situp_To_Idle", TRUE, TRUE, FALSE, 20, 20)
+runExample("Standing_W_Briefcase_Idle", TRUE, TRUE, FALSE, 100, 10)
+runExample("Swinging", TRUE, TRUE, FALSE, 10, 100)
+runExample("Taunt", TRUE, TRUE, FALSE, 10, 10)
+runExample("Walking_Up_The_Stairs", TRUE, TRUE, FALSE, 10, 10)
+runExample("Wall_Run", TRUE, TRUE, FALSE, 5, 50)
+
 run <- function(savePDF, savePNG, logErrorInformation) {
   examples <- gatherExamples()
   for (i in 1:length(examples)) {
