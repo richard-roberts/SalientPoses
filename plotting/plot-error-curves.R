@@ -315,6 +315,14 @@ logCompresionRatio <- function(example, original) {
 runExample <- function(example, savePDF, savePNG, logErrorInformation, xLabelInc, yLabelInc) {
   plotErrorCurvesForExample(example, FALSE, FALSE, xLabelInc, yLabelInc)
   
+  if (savePDF) {
+    plotErrorCurvesForExample(example, savePDF, FALSE, xLabelInc, yLabelInc)  
+  }
+  
+  if (savePNG) {
+    plotErrorCurvesForExample(example, FALSE, savePNG, xLabelInc, yLabelInc)  
+  }
+  
   if (logErrorInformation) {
     files <- gatherFilesInExample(example)
     original <- read.csv(paste(c(DATA_DIRECTROY, example, files[1]), collapse = "/"))
