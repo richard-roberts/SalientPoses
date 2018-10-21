@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Paper"
+    url: /paper/
+  - title: "Algorithm"
+    url: /algorithm/
+  - title: "Results"
+    url: /results/
+  - title: "Maya Plugin"
+    url: https://github.com/richard-roberts/SalientPosesMaya
+  - title: "CLI"
+    url: https://github.com/richard-roberts/SalientPosesPerformance
