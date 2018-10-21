@@ -154,7 +154,7 @@ getLegendNamesForExample <- function(example) {
   # Iterate each of the compressed animations and create a name,
   # which includes the number of keyframes and the compression level
   for (i in 2:length(files)) {
-    nKeyframes <- nKeyframesFromFilename(files[i])
+    nKeyframes <- nKeyframesFromFilename(files[length(files)-i+2])
     compression <- calculateCompressionLevel(nKeyframes, nFrames)
     legendName <- glue("N={nKeyframes}, C={round(compression, digits=2)}%")
     legendNames[i-1] = legendName
@@ -231,7 +231,9 @@ plotErrorCurvesForExample <- function(example, savePDF, savePNG, xLabelInc, yLab
   title(ylab = "Maximum Error Per Joint (mm)", mgp=c(2.5,0,0),cex.lab=1.2)
   
   # Plot the error curves
+  usedColors <- character()
   for (i in 1:length(errorCurves)) {
+    usedColors[i] = COLORS[i]
     lines(meta$start:meta$end, errorCurves[[i]], col = COLORS[i], type="o", pch=20)
   }
   
@@ -239,7 +241,7 @@ plotErrorCurvesForExample <- function(example, savePDF, savePNG, xLabelInc, yLab
   legend(
     meta$start + (meta$end - meta$start) / 100, maxY, # set the position
     legend=getLegendNamesForExample(example), # set the names
-    col=COLORS, # use colors (defined in config at top of file)
+    col=rev(usedColors), # use colors (defined in config at top of file)
     lwd=2, # line width
     bg="white" # set background
   )
