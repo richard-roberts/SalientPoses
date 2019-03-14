@@ -1,2 +1,3 @@
-# SalientPoses
-A home for documentation on, and implementations of, the Salient Poses algorithm.
+# Salient Poses
+
+The Salient Poses website
