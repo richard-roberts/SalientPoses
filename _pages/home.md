@@ -13,11 +13,11 @@ The idea is that you provide an animation,
 which Salient Poses analyzes to find 
 potential sets of
 [keyframes]([keyframes](https://en.wikipedia.org/wiki/Key_frame)).
-You choose one set of keyframes that's best for your use case,
-and then the Salient Poses creates a new animation for you.
-The animation is a bit like a
+You choose any set of keyframes that's best for your use case
+and, from there, Salient Poses creates a new easy-to-edit animation for you.
+The new animation is similar to a
 [blocked animation](https://en.wikipedia.org/wiki/Blocking_(animation)),
-but has the detail of a finished animation.
+but with all the detail of a real performance.
 
 ![Before and After]({{ site.url }}/images/salient_before_and_after_small.png)
 
@@ -31,17 +31,15 @@ preserving the shape of each curve.
 
 After applying Salient Poses,
 the simplified animation has fewer keyframes.
-This is great for compression, because
-less data is user to represent the animation.
-This is also great for editing, because
+This is great for editing because
 the simplified animation can be adjusted using
-standard keyframe animation techniques.
-Almost all animation tools - such as 
+the time-tested keyframe animation techniques
+build into most animation tools, such as 
 [Maya](https://www.autodesk.co.nz/products/maya/overview)
-and 
-[Blender](https://www.blender.org/) -
-provide support for adjusting motion
-using keyframes.
+or 
+[Blender](https://www.blender.org/).
+Having fewer keyframes is also great for compression
+as the new animation contains fewer data.
 
 #### How It works
 
@@ -49,7 +47,7 @@ Given mocap,
 Salient Poses performs an **optimal keyframe-reduction**.
 The idea of the reduction is that we keep only the
 **most important keyframes**.
-Salient Poses provides not only one solution,
+Salient Poses provides not only one solution
 but an **entire range of solutions**
 (the different solutions offer different levels of compression).
 After you choose the right solution for you,
@@ -61,7 +59,7 @@ that are configured to best recreate the original animation.
 
 # Getting Started
 
-If you're a technical artist, a hobbyists, or otherwise interested
+If you're a technical artist, a hobbyist, or are otherwise interested
 in using Salient Poses I'd recommend starting with the interactive
 [Maya Plugin](https://github.com/richard-roberts/SalientPosesMaya).
 Otherwise, developers looking to automate the process might be more
@@ -69,7 +67,7 @@ interested in the
 [Command Line Interface](https://github.com/richard-roberts/SalientPosesPerformance). 
 
 Otherwise, if you're want to read more about the algorithm 
-you might be interested to checkout
+you might be interested to check out
 the [algorithm](/algorithm/) page for a more detailed overview
 of Salient Poses
 and also the [results](/results/) page to see some
@@ -100,7 +98,7 @@ compressing and editing motion capture animation.
 Throughout the process,
 [John Lewis](http://www.scribblethink.org/)
 supervised the project,
-helping out with both the high level theory
+helping out with both the high-level theory
 and also the nuts of bolts are the programming
 (Lewis is now a lead researcher at [SEED, Electronic Arts](https://www.ea.com/seed)).
 The research team at [OLM Digital](https://www.olm.co.jp/?lang=en) -
@@ -110,10 +108,10 @@ contributed invaluable industry expertise and perspective to the research.
 Finally,
 Jaewoo Seo and Yeongho Seol
 reviewed the work many times over
-and contributed feedback from the side lines.
+and contributed both feedback and code snippets from the sidelines.
 
 Outside of the everyone above,
-special thanks should be given to
+we call special thanks to
 Ayumi Kimura and other staff at [OLM Digital](https://www.olm.co.jp/?lang=en),
 along with artists and researchers at
 [SEED, Electronic Arts](https://www.ea.com/seed),
