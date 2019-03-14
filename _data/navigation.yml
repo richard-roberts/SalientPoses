@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Paper"
-    url: /paper/
+  - title: "Publications"
+    url: /publications/
   - title: "Algorithm"
     url: /algorithm/
   - title: "Results"
