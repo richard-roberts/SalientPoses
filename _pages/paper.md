@@ -1,8 +1,19 @@
 ---
 layout: single
 author_profile: false
-permalink: /paper/
+permalink: /publications/
 ---
 
+### Optimal and Interactive Keyframe Selection for Motion Capture (Journal Article)
 
-This work will appear in the proceedings of the [SIGGRAPH Asia '18](http://sa2018.siggraph.org/), a top-level computer graphics held annually around the world. I will include a link once published, but in the mean time here is an [author preprint](/other/preprint.pdf).
+- Richard Roberts, J.P. Lewis, Ken Anjyo, Jaewoo Seo, and Yeongho Seol
+- [CVMJ](https://www.springer.com/computer/image+processing/journal/41095), to appear
+
+### Optimal and Interactive Keyframe Selection for Motion Capture (Presentation)
+- Richard Roberts, J.P. Lewis, Ken Anjyo, Jaewoo Seo, and Yeongho Seol
+- [SA'18 (YouTube repeat)](https://www.youtube.com/watch?v=7vWncDYB86E), 2018
+
+### Optimal and Interactive Keyframe Selection for Motion Capture (Technical Brief)
+
+- Richard Roberts, J.P. Lewis, Ken Anjyo, Jaewoo Seo, and Yeongho Seol
+- [SA'18](https://dl.acm.org/citation.cfm?id=3283256), 2018
