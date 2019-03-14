@@ -2,6 +2,7 @@
 layout: single
 author_profile: false
 permalink: /publications/
+title: Publications
 ---
 
 ### Optimal and Interactive Keyframe Selection for Motion Capture (Journal Article)
