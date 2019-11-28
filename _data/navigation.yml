@@ -1,11 +1,11 @@
 # main links
 main:
-  - title: "Publications"
-    url: /publications/
   - title: "Algorithm"
     url: /algorithm/
   - title: "Results"
     url: /results/
+  - title: "Academic Work"
+    url: /#academicwork
   - title: "Maya Plugin"
     url: https://github.com/richard-roberts/SalientPosesMaya
   - title: "CLI"
